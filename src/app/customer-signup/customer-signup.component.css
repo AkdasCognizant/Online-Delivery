@@ -1,0 +1,508 @@
+
+.login-wrapper {
+  background-image: url('../../../public/foodimg2.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  width: 200%;
+  max-width: 400px;
+  max-height: 70%;
+  height: 500px
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-links {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.form-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+} 
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.carousel-inner img {
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.carousel-caption {
+  background-color: rgba(255, 4, 100, 0.719);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.card-body h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.card-body p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;;
+}
+
+/* //////////////////////////////////////////////////////////////////////// */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+ 
+body{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+ 
+.container{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+ 
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+ 
+.container span{
+    font-size: 12px;
+}
+ 
+.container a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+ 
+.container button{
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+ 
+.container button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+ 
+.container form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+ 
+.container input{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+ 
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+ 
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+ 
+.container.active .sign-in{
+    transform: translateX(100%);
+}
+ 
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+ 
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+ 
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+ 
+.carousel-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+    background-image: url('../../../public/data2.jpg');
+}
+ 
+
+/*  
+/////////////////////////////////////////////////////////////////////////////////////// */
+
+.signup-background {
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px 18px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  position: relative;
+  z-index: 1;
+  
+}
+/* form {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+} */
+form {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.85); /* Soft white overlay */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+@media (max-width: 576px) {
+  form {
+    max-width: 90%;
+    padding: 1rem;
+  }
+}
+
+
+/* Wrapper layout */
+.login-wrapper {
+  background-image: url('../../../public/foodimg2.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Login form styling */
+.login-form {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease;
+}
+
+.login-form:hover {
+  transform: translateY(-5px);
+}
+
+/* Headline */
+.login-form h4 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Form links */
+.form-links {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.form-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.form-links a:hover {
+  color: #0056b3;
+}
+
+/* Message styling */
+.text-success {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.text-danger {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+/* Responsive tweaks */
+
+
+
+
+/* Container layout */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  background-color: #fff5f5;
+  min-height: 80vh;
+  width: 800px;
+  background: transparent;
+  
+  /* 90% visible */
+  background-color: rgba(255, 255, 255, 0.8); /* 80% opaque */
+  /* opacity: 0.9; */
+  
+}
+
+/* Form container */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 25px 20px;
+  margin: 15px;
+  border-radius: 10px;
+  
+}
+
+/* Form fields */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+/* Toggle container */
+.carousel-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 25px 20px;
+  margin: 15px;
+  border-radius: 10px;
+  color: rgba(219, 35, 35, 0.878);
+  text-align: center;
+  background-color: indianred;
+  background-image: url('../../../public/data2.jpg');
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+  }
+
+  .form-container,
+  .toggle-container {
+    max-width: 90%;
+  }
+}
+
+
+body{
+    margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../../public/Signup.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.carousel-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 15px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #dc3545;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../../public/data2.jpg');
+}
+
+
+.carousel-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* /////////////////////////  ngif text sizze lowering  ////////////////////////////////// */
+
+
+.carousel-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+input::placeholder {
+  color: #c0c0c0;              /* Soft silver tone */
+  font-weight: 300;            /* Light and airy */
+  font-family:fantasy
+  font-size: 1rem;
+  text-transform: uppercase;   /* Adds a clean, bold feel */
+  transition: color 0.3s ease;
+}
+

@@ -1,0 +1,48 @@
+{
+  "customers": [
+    {
+      "id": "56e7",
+      "name": "Akdas ",
+      "password": "123456",
+      "email": "akdas@gmail.com",
+      "phone": "1234567891",
+      "address": "abc jdasjf fhsldfh gadfi"
+    },
+    {
+      "id": "2140",
+      "name": "Aditya",
+      "password": "123456",
+      "email": "aditya@gmail.com",
+      "phone": "9420949075",
+      "address": "kjfhkajh aoshdoashd "
+    },
+    {
+      "id": "c3c5",
+      "name": "Charan",
+      "password": "123456",
+      "email": "charan@gmail.com",
+      "phone": "1234567892"
+    },
+    {
+      "id": "436e",
+      "name": "Juned",
+      "password": "123456",
+      "email": "juned@gmail.com",
+      "phone": "8765432119"
+    },
+    {
+      "id": "542b",
+      "name": "Ganesh Talwekar",
+      "password": "asdfghjkl",
+      "email": "ganesh@123.com",
+      "phone": "8806158110"
+    },
+    {
+      "id": "a2f3",
+      "name": "Parag",
+      "password": "abcdef",
+      "email": "parag@123.com",
+      "phone": 8888888888
+    }
+  ]
+}

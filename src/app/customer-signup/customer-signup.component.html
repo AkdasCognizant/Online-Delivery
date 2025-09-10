@@ -1,0 +1,84 @@
+
+
+
+
+<body>
+    
+<div class="container" id="container">
+       
+    <div class="form-container sign-in">
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="bg-light p-4 rounded shadow w-100" style="max-width: 400px; background: transparent;">
+
+
+              
+          <div class="mb-3 text-center">
+              <h4>Customer Signup</h4>
+            </div>
+
+            
+            <div class="mb-3">
+              <label class="form-label" >Name</label>
+              <input type="text" formControlName="name" class="form-control" placeholder="Enter your name"/>
+              <div *ngIf="submitted && f['name'].errors" class="text-danger">
+                Name is required
+              </div>
+            </div>
+
+            
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" formControlName="email" class="form-control" placeholder="Example@gmail.com"/>
+              <div *ngIf="submitted && f['email'].errors" class="text-danger">
+                Enter a valid email address
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="number" formControlName="phone" class="form-control" />
+              <div *ngIf="submitted && f['phone'].errors" class="text-danger">
+                Enter a valid 10-digit phone number
+              </div>
+            </div>
+
+            
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" formControlName="password" class="form-control" placeholder="Create Password" />
+              <div *ngIf="submitted && f['password'].errors" class="text-danger">
+                Password must be at least 6 characters
+              </div>
+            </div>
+<!-- 
+      <div class="mb-3">
+        <label class="form-label">Address</label>
+        <textarea formControlName="address" class="form-control"></textarea>
+        <div *ngIf="submitted && f['address'].errors" class="text-danger">
+          Address is required
+        </div>
+      </div> -->
+
+      <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+
+      <div class="text-center mt-3">
+        <span class="text-muted">Already have an account?</span>
+        <a [routerLink]="['/customerLogin']" class="text-decoration-none fw-semibold ms-1">Login</a>
+      </div>
+
+      <!-- <div *ngIf="message" class="mt-3">
+        <p class="text-success text-center">{{ message }}</p>
+      </div> -->
+      
+
+    </form>
+      </div>
+       
+
+      <div class="carousel-container">
+          <img src="data2.jpg" alt="">
+      </div>
+
+    </div>  
+
+</body>
