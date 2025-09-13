@@ -1,0 +1,27 @@
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+button
+{
+    color: black;
+}
+.button1:hover {
+  background-color: #e9802a; /* 🔴 Slightly darker red on hover */
+  transform: scale(1.03);    /* Subtle zoom effect */
+  color: white;
+}
+
+.button2:hover {
+  background-color: #beb7b1; /* 🔴 Slightly darker red on hover */
+  transform: scale(1.03);    /* Subtle zoom effect */
+  color: rgb(30, 28, 28);
+}
+
+h2, h5{
+    font-family: 'Poppins', sans-serif;
+}

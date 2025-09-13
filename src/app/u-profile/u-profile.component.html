@@ -1,0 +1,204 @@
+<div class="container py-4">
+  <div class="row mb-4">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+      <a routerLink="/" class="text-muted">
+        <i class="bi bi-arrow-left"></i> Back to Home
+      </a>
+      <h2>My Profile</h2>
+    </div>
+  </div>
+  
+ <!-- {{ user.avatar || 'assets/avatar-placeholder.png' }} -->
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-lg-3">
+      <div class="card sticky-top">
+        <div class="card-body text-center">
+          <img src="#" class="rounded-circle mb-3 profile-img" width="80" height="80" />
+          <h5><b>{{ user.name }}</b></h5>
+          <p class="text-muted">{{ user.email }}</p>
+          <p class="text-muted">{{ user.phone }}</p>
+         
+        </div>
+        <hr />
+        <button class="button1 btn mt-4 mb-4 shadow m-auto p-3 bi bi-pencil text-center"
+                style="font-family: 'Poppins', sans-serif;"
+                (click)="showEditForm()">
+        Edit Profile
+        </button>
+
+        <ul class="list-group list-group-flush">
+          <li *ngFor="let item of menuItems" class="list-group-item" [class.active]="activeTab === item.key" (click)="setActiveTab(item.key)" >
+            {{ item.label }}
+            <span *ngIf="item.badge" class="badge bg-secondary float-end" style="background-color: #e9802a;">{{ item.badge }}</span>
+          </li>
+        </ul>
+        <hr />
+        <button class="button2 btn btn-outline-danger w-100 mt-3 mb-3 shadow m-auto p-3 text-center " style="font-family: 'Poppins', sans-serif;">
+          <i class="bi bi-box-arrow-right"></i> Logout
+        </button>
+      </div>
+    </div>
+ 
+            <!-- Main Content -->
+        <div class="col-lg-9">
+        <div class="card">
+            <div class="card-body">
+            <ng-container [ngSwitch]="activeTab">
+
+                <!-- Orders Tab -->
+                <div *ngSwitchCase="'orders'">
+                <h4>Order History</h4>
+                <!-- Add your order history component or markup -->
+                </div>
+
+                <!-- Edit Profile Tab -->
+                <div *ngSwitchCase="'edit'">
+                <h4 class="mb-4">Edit Profile</h4>
+                <!-- <form [formGroup]="editForm" (ngSubmit)="onUpdate()" class="row g-3">
+
+                    <div class="col-md-6">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" formControlName="name" />
+                    </div>
+
+                    <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" formControlName="email" />
+                    </div>
+
+                    <div class="col-md-6">
+                    <label class="form-label">Phone</label>
+                    <input type="text" class="form-control" formControlName="phone" />
+                    </div>
+
+                    <div class="col-md-6">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" formControlName="password" />
+                    </div>
+
+                    <div class="col-12 text-end">
+                    <button type="submit" class="btn btn-success mt-3">Save Changes</button>
+                    </div>
+                </form> -->
+                </div>
+
+
+                <!-- Addresses Tab -->
+                <div *ngSwitchCase="'addresses'">
+                <h4>Saved Addresses</h4>
+                <!-- Add your address management UI here -->
+                </div>
+
+                <!-- Favorites Tab -->
+                <div *ngSwitchCase="'favorites'">
+                <h4>Your Favorites</h4>
+                <!-- Add your favorite items or restaurants here -->
+                </div>
+
+                <!-- Help desk -->
+               <div *ngSwitchCase="'help'">
+                <h4 class="mb-4">🧠 Frequently Asked Questions</h4>
+
+                <div class="accordion" id="faqAccordion">
+
+                    <!-- Q1 -->
+                    <div class="accordion-item mb-3">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        How do I track my order?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                        Once your order is placed, you can track it in the "Orders" section of your profile. Real-time updates will show the preparation, dispatch, and delivery status.
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item mb-3">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Can I cancel an order after placing it?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                        Yes, you can cancel your order within 2 minutes of placing it. After that, cancellation depends on the restaurant's acceptance and preparation status.
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item mb-3">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What payment methods are accepted?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                        We accept UPI, debit/credit cards, net banking, and select wallets like Paytm and PhonePe. Cash on delivery is available for select restaurants.
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="accordion-item mb-3">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        How do I update my delivery address?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                        Go to the "Addresses" tab in your profile and click "Edit" next to your saved address. You can add, remove, or update multiple delivery locations.
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="accordion-item mb-3">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Is contactless delivery available?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                        Yes! You can select "Contactless Delivery" at checkout. The delivery partner will leave your order at the doorstep and notify you via call or app.
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+                </div>
+
+
+                <!-- Default Fallback -->
+                <div *ngSwitchDefault>
+                <h4>Welcome to your profile dashboard</h4>
+                <p>Select a tab to view its content.</p>
+                </div>
+
+            </ng-container>
+            </div>
+        </div>
+        </div>
+
+
+    
+  </div>
+</div>
+ 

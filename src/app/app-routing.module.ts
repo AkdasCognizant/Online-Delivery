@@ -6,6 +6,7 @@ import { CustomerLoginComponent } from './customer-login/customer-login.componen
 // import { RestaurantsignupComponent } from './restaurantsignup/restaurantsignup.component';
 import { auth1Guard } from './auth1.guard';
 import { ProfileComponent } from './profile/profile.component';
+import { UProfileComponent } from './u-profile/u-profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, //  Default route
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'commonLogin', component: CustomerLoginComponent },
   { path: 'commonSignup', component: CustomerSignupComponent },
   { path: 'home', component: HomeComponent, canActivate: [auth1Guard] },
-  { path: 'profile', component: ProfileComponent, canActivate: [auth1Guard] }
+  { path: 'profile', component: ProfileComponent, canActivate: [auth1Guard] },
+  { path : 'uProfile', component: UProfileComponent, canActivate: [auth1Guard]}
 ];
 
 @NgModule({

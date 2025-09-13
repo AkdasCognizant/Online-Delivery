@@ -10,12 +10,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
+import { UProfileComponent } from './u-profile/u-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProfileComponent,
+    UProfileComponent,
   ],
   imports: [
     BrowserModule,

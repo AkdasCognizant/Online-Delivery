@@ -13,7 +13,7 @@ export class HomeComponent {
 
   navigateToProfile(): void {
     if (this.authService.isAuthenticated()) {
-      this.router.navigate(['/profile']); 
+      this.router.navigate(['/uProfile']); 
     } else {
       this.router.navigate(['/commonLogin'], { queryParams: {redirect : '/home'}}); 
     }
